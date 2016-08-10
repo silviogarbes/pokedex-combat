@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>P</title>
+<link rel="stylesheet" href="./jquery/jquery.mobile-1.4.5.min.css" />
+<script src="./jquery/jquery-1.11.0.min.js"></script>
+<script src="./jquery/jquery.mobile-1.4.5.min.js"></script>
+<script src="./js/pokedex.js"></script>
+</head>
+<body onload="start();">
+
+	<div data-role="page" id="index">
+		<div data-role="header" data-theme="b">
+			<h1>Pokedex Combat</h1>
+		</div>
+		<div data-role="content" id="conteudo">
+			<form name="formPesquisar" method="post" action="javascript:pesquisar()">
+				<label for="codigoPokemon">Código pokedex:</label>
+				<input name="codigoPokemon" id="codigoPokemon" value="" type="text">
+				<input type="submit" value="Pesquisar">
+			</form>
+			<ul data-role='listview' data-ajax='false' data-inset='true' data-theme='a' id='tipo'>
+				<li data-role='list-divider'>Tipo</li>
+			</ul>
+			<ul data-role='listview' data-ajax='false' data-inset='true' data-theme='a' id='danos'>
+			</ul>
+			<div id='pokemonsPorTipo'></div>
+		</div>
+		
+		<div data-role="footer">
+            <div id="status">Status</div>
+        </div>
+	</div>
+
+
+</body>
+</html>
